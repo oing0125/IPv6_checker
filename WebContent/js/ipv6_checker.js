@@ -21,6 +21,11 @@ jQuery.fn.maskIpv6 = function(){
 				}
 			};
 		}
+		// #1 set maximum text length 
+		if(str.length > 39){
+			$(this).val(_input_ipv6);
+			return;
+		}
 		_input_ipv6 = $(this).val();
 	});
 }
